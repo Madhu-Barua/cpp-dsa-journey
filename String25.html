@@ -1,0 +1,60 @@
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.>
+#include< string.h >
+void trim(char *arr,int size){
+  int start=0,end=size-1,z=0;
+  while(arr[start]==32){
+  start++;
+  z++;
+  }
+  while(arr[end]==32){
+  end--;
+  z++;
+  }
+  rr[end+1]='\0';
+  size=size-z;
+  for(int i=0;i<=size;i++){
+  arr[i]=arr[start];
+  start++;}  
+  puts(arr);
+  }
+  int main(){
+  char str[20];
+  int i=0,size=0;
+  printf("Enter a string:");
+  gets(str);
+  for(int i=0;str[i]!='\0';i++)
+  size++;
+  printf("After Trimming : ");
+  trim(str,size);
+  return 0;
+}             
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter a string:  madhu barua
+madhu barua
+After Trimming : madhu barua
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

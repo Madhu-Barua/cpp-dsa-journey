@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<title>2-D ARRAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="2-D Array Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >  
+#include< conio.h >
+int main()  
+{  
+int a[10][10],scaler,r,c,i,j;    
+printf("Enter the number of row :");    
+scanf("%d",&r);    
+printf("Enter the number of column :");    
+scanf("%d",&c);    
+printf("Enter the matrix elements : ");    
+for(i=0;i < r;i++)    
+{for(j=0;j < c;j++)    
+{    
+scanf("%d",&a[i][j]);  
+}} 
+printf("Matrix is :\n");    
+for(i=0;i < r;i++)    
+{    
+for(j=0;j < c;j++)    
+{      
+   printf("%d\t",a[i][j]);    
+}
+printf("\n");
+}   
+printf("Enter a number to multiply with matrix :\n");  
+scanf("%d",&scaler);  
+for(i=0;i < r;i++)    
+{    
+for(j=0;j < c;j++)    
+{      
+a[i][j]=a[i][j]*scaler;    
+}} 
+printf("Product matrix is : \n");      
+for(i=0;i < r;i++)    
+{    
+for(j=0;j < c;j++)    
+{    
+printf("%d\t",a[i][j]);    
+}
+printf("\n");     
+}    
+return 0;  
+}   
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc scalermatrix.c
+PS G:\C Language> .\a.exe
+Enter the number of row :2
+Enter the number of column :2
+Enter the matrix elements : 0 1 2 1
+Matrix is :
+0       1
+2       1
+Enter a number to multiply with matrix :
+2
+Product matrix is :
+0       2
+4       2
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

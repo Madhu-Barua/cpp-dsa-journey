@@ -1,0 +1,44 @@
+
+
+<html>
+<head>
+<title>RECURSION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Recursion Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include < stdio.h >
+int addNumbers(int n);
+int main() {
+  int num;
+  printf("Enter a positive integer: ");
+  scanf("%d", &num);
+  printf("Sum = %d", addNumbers(num));
+  return 0;
+}
+int addNumbers(int n) {
+  if (n != 0)
+    return n + addNumbers(n - 1);
+  else
+    return n;
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter a positive integer: 10
+Sum = 55
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

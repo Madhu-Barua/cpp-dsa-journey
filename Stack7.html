@@ -1,0 +1,71 @@
+
+
+<html>
+<head>
+<title>STACK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Stack button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+ int s1[6],s2[6],top=-1;
+void push(int value){
+    top++;
+    s1[top]=value;
+}
+int pop(){
+    int data =s1[top];
+    top--;
+    return data; 
+}
+void main(){
+    int i=0,value,k,sorttop=-1;
+    for(i=0;i < 6;i++){
+ printf("Enter the value to be pushed : ");
+    scanf("%d",&value);
+    push(value);
+    }
+    while(top!=-1){
+         k= pop();
+   while(sorttop!=-1 && s2[sorttop] < k){
+           push(s2[sorttop]);
+              sorttop--;
+       }
+    sorttop++;
+    s2[sorttop]=k;
+}
+while(sorttop!=-1){
+  push(s2[sorttop]);
+  sorttop--;   
+}
+printf("Sorted stack : ");
+for(i=0;i < = top;i++)
+printf(" %d ",s1[i]);
+printf("\n");
+
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter the value to be pushed : 3
+Enter the value to be pushed : 6
+Enter the value to be pushed : 2
+Enter the value to be pushed : 6
+Enter the value to be pushed : 2
+Enter the value to be pushed : 7
+Sorted stack :  2  2  3  6  6  7 
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

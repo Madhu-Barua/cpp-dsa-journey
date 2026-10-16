@@ -1,0 +1,48 @@
+
+
+<html>
+<head>
+<title>ARRAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="1-D Array Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void main(){
+ int arr[5],i,j;
+ printf("Enter the elements of an array : ");
+ for(i=0;i<5;i++){
+    scanf("%d",&arr[i]);
+ }
+ printf("Duplicate elements of an array are : ");
+ for(i=0;i<5;i++){
+    for(j=i+1;j<5;j++){
+        if(arr[i]==arr[j]){
+        printf("%d",arr[i]);
+        }}}
+ printf("\n");       
+ getch();
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<pre>
+<h2>
+PS G:\C Language> gcc web11.c
+PS G:\C Language> .\a.exe
+Enter the elements of an array : 1 2 2 3 3 4
+Duplicate elements of an array are : 23
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

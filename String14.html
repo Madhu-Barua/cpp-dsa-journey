@@ -1,0 +1,49 @@
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+int strdif(char*,char*);
+int main(){
+    char str[10],str2[10];
+    int dif;
+    printf("Enter the name : ");
+    gets(str);
+    printf("Enter the name : ");
+    gets(str2);
+    strdif(str,str2);   
+}
+int strdif(char *str,char *str2){
+    int dif,i;
+    for(i=0;str[i]!='\0'||str2[i]!='\0';i++){
+        dif=str[i]-str2[i];
+        printf("%d\t",dif);
+       
+    }
+} 
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter the name : madhu
+Enter the name : madhu
+0	0	0	0	0	
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

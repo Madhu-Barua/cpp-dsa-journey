@@ -1,0 +1,50 @@
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+void main(){
+char str1[10],str2[10];
+int i,j;
+puts("Enter first string : ");
+gets(str1);
+puts("Enter second string : ");
+gets(str2);
+j=strlen(str1);
+for(i=0;str2[i]!='\0';i++){
+    str1[i+j]=str2[i];
+}
+str1[i+j]='\0';
+printf("Concatenated Strings : %s\n",str1);
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web28.c
+PS G:\C Language> .\a.exe
+Enter first string :
+Madhu
+Enter second string :
+Barua
+Concatenated Strings : MadhuBarua
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

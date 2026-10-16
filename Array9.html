@@ -1,0 +1,71 @@
+
+
+<html>
+<head>
+<title>1-D ARRAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="1-D Array Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+    int main()
+    {
+  int size, i,k, j, temp, n;
+  printf("Enter the size of array : ");
+  scanf("%d", &size);
+  int arr[size];
+  printf("\n Enter the array elements : ");
+  for (i = 0; i < size; i++) {
+    scanf("%d", &arr[i]);
+    }
+  for(i=0;i < size;i++){
+  for(j=i+1;j < size;j++){
+  if(arr[i] == arr[j]){
+  for(k=j;k < size;k++){
+   arr[k]=arr[k+1];
+        }
+        size--;
+        j--;
+        }}}
+  for(int i = 0; i < size; i++) {     
+  for(int j = i+1; j < size ; j++) {     
+    if(arr[i] > arr[j]) {    
+     temp = arr[i];    
+     arr[i] = arr[j];    
+     arr[j] = temp;    
+           }}}        
+ printf("Elements of an array in 
+ ascending order : ");
+    for(i=0;i < size;i++){
+        printf("%d",arr[i]);
+    }
+  printf("\nEnter Which kth Number 
+  You want :");
+  scanf("%d", &n);
+  printf("The %d kth number is: %d", n, 
+  arr[n - 1]);
+        return 0;
+    }  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter the size of array : 5
+Enter the array elements : 2 4 6 2 8
+Elements of an array in ascending order : 2468
+Enter Which kth Number You want :3
+The 3 kth number is: 6
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

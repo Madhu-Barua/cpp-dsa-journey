@@ -1,0 +1,51 @@
+
+
+
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include < stdio.h >
+#include < string.h >
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+    int index;
+    printf("Enter the index: ");
+    scanf("%d", &index);
+    int length = strlen(str);
+    if (index >= 0 && index < length) {
+        char character = str[index];
+        printf("Character at index %d: %c\n", 
+        index, character);
+    } else {
+        printf("Invalid index\n");
+    return 0;
+}}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter a string: madhu
+Enter the index: 4
+Character at index 4: u
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

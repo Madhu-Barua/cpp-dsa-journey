@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void ms(int *arr ,int l,int m,int u);
+void mergesort(int *arr,int l,int u){
+    int mid;
+    if(l < u){
+        mid=(l+u)/2;
+        mergesort(arr,l,mid);
+        mergesort(arr,mid+1,u);
+        ms(arr,l,mid,u);
+    }
+}
+void ms(int *arr ,int l,int m,int u){
+   int i=l,j=m+1;
+   int arr2[5],k=l;
+   while(i <= m && j <= u)
+    {if(arr[i]<=arr[j]){
+        arr2[k]=arr[i];
+        i++;
+    }
+    else{
+        arr2[k]=arr[j];
+        j++;
+       }
+    k++;
+    }
+          
+   if(i>m){
+    while(j <= u){
+    arr2[k]=arr[j];
+        j++;
+        k++;
+    }
+   }
+   else{
+    while(i <= m){
+            arr2[k]=arr[i];
+        i++;
+        k++;
+    }
+   }
+  
+for(int i=l;i<=u;i++){
+arr[i]=arr2[i];}
+}
+int main()
+{
+int arr[5]={9,4,6,2,1};
+mergesort(arr,0,4);
+for(int i=0;i<5;i++){
+printf("%d\n",arr[i]);}
+return 0;
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc mergesort.c
+PS G:\C Language> .\a.exe
+1
+2
+4
+6
+9
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

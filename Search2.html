@@ -1,0 +1,67 @@
+
+
+
+<html>
+<head>
+<title>SEARCHING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Search Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+int recursion(char a[],char item,int index,
+int size){
+     int pos=0;
+     if(index >= size){
+        return 0;
+     }
+      else if(a[index]==item){
+      pos=index+1;
+      return pos;
+      }
+      else{
+      return recursion(a,item,index+1,size);
+      }
+      return pos;
+}
+void main(){
+    int size,pos,i;
+    char item;
+    printf("Enter size of string : ");
+    scanf("%d",&size);
+    char a[size];
+    printf("Enter string : ");
+    scanf("%s",a);
+    printf("Enter element to search : ");
+    fflush(stdin);
+    scanf("%c",&item);
+    pos = recursion(a,item,0,size); 
+    if(pos!=0)
+    printf("%c element is found at the 
+    location : %d\n",item,pos);
+    else
+    printf("Element not found");
+    }  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size of string : 6
+Enter string : madhu
+Enter element to search : d
+d element is found at the location : 3
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

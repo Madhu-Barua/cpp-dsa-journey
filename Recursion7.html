@@ -1,0 +1,46 @@
+
+
+<html>
+<head>
+<title>RECURSION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Recursion Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+int sumOfDigits(int num);
+int main()
+{
+    int num, sum;
+printf("Enter any number to find sum of digits:");
+    scanf("%d", &num);
+    sum = sumOfDigits(num);
+    printf("Sum of digits of %d = %d", num, sum);
+    return 0;
+}
+int sumOfDigits(int num)
+{
+    if(num == 0)
+        return 0;
+    return ((num % 10) + sumOfDigits(num / 10));
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter any number to find sum of digits: 23456
+Sum of digits of 23456 = 20
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

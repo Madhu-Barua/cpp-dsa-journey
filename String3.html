@@ -1,0 +1,46 @@
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+void main(){
+char s[20];
+int i;
+puts("Enter a string : ");
+gets(s);
+if(s[0]>=97 && s[0]<=122)
+        s[0]=s[0]-32;
+for(i=1;s[i]!='\0';i++)
+    if(s[i]>=65 && s[i]<=90)
+        s[i]=s[i]+32;
+printf("The String in Sentence case is : %s \n",s);
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web23.c
+PS G:\C Language> .\a.exe
+Enter a string :
+hello heena
+The String in Sentence case is : Hello heena
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

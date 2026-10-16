@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+int comparetwostring(char a[],char b[]){
+   int flag=0,i=0;
+   while(a[i]!='\0' && b[i]!='\0'){
+    if(a[i]!=b[i]){
+        flag=1;
+        break;
+    }
+    i++;
+   }
+   if(a[i]!='\0' || b[i]!='\0')
+    return 1;
+   if(flag==0)
+      return 0;
+   else
+      return 1;
+   
+}
+void main(){
+char str1[20],str2[20];
+puts("Enter first string : ");
+gets(str1);
+puts("Enter second string : ");
+gets(str2);
+int c=comparetwostring(str1,str2);
+if(c==0)
+    printf("String is Equal\n");
+else
+    printf("String is Unequal\n");
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web27.c
+PS G:\C Language> .\a.exe
+Enter first string :
+Madhu
+Enter second string :
+Madhu
+String is Equal
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

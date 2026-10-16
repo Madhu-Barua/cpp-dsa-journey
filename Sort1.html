@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void main(){
+    int i,j,min,swap,a[10],n;
+ printf("Enter number of elements you want : ");
+    scanf("%d",&n);
+    printf("Enter elements of array : ");
+    for(i=0;i < n;i++){
+        scanf("%d",&a[i]);
+        }
+    for(i=0;i < n-1;i++){
+    min=i;
+    for(j=i+1;j < n;j++){
+        if(a[j] < a[min])
+    min=j;    
+    }
+    if(min!=i){
+    swap=a[i];
+    a[i]=a[min];
+    a[min]=swap;    
+    } }
+    printf("Sorted Array : \n");
+    for(i=0;i < n;i++){
+        printf("%d",a[i]);
+        printf("\n");
+    }
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc selectionsort.c
+PS G:\C Language> .\a.exe
+Enter number of elements you want : 6
+Enter elements of array : 34 56 12 34 90 100
+Sorted Array :
+12
+34
+34
+56
+90
+100
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

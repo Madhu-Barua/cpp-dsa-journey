@@ -1,0 +1,53 @@
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+int main(){
+    char str[100];
+    int i;
+    printf("Enter a string: ");
+    scanf("%[^\n]s", str);
+    printf("ASCII values of characters 
+    in the string:\n");
+    for (i = 0; str[i] != '\0'; i++) {
+    printf("Character: %c, ASCII Value: %d\n", 
+    str[i], (int)str[i]);
+    }
+    return 0;
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter a string: MADHUBARUA
+ASCII values of characters in the string:
+Character: M, ASCII Value: 77
+Character: A, ASCII Value: 65
+Character: D, ASCII Value: 68
+Character: H, ASCII Value: 72
+Character: U, ASCII Value: 85
+Character: B, ASCII Value: 66
+Character: A, ASCII Value: 65
+Character: R, ASCII Value: 82
+Character: U, ASCII Value: 85
+Character: A, ASCII Value: 65
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

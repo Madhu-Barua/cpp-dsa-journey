@@ -1,0 +1,95 @@
+
+
+<html>
+<head>
+<title>STACK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Stack button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+#include< string.h >
+#include< ctype.h >
+#define MAX_SIZE 100
+
+int isOperator(char ch) {
+    return (ch == '+' || ch == '-' 
+     || ch == '*' || ch == '/');
+}
+
+int precedence(char ch) {
+    if (ch == '+' || ch == '-')
+        return 1;
+    if (ch == '*' || ch == '/')
+        return 2;
+    return 0;
+}
+
+void infixToPrefix(char infix[], 
+     char prefix[]) {
+    int len = strlen(infix);
+    char stack[MAX_SIZE];
+    int top = -1;
+    int i, j = 0;
+
+    for (i = len - 1; i >= 0; i--) {
+        if (infix[i] == ' ')
+            continue;
+        if (isalnum(infix[i])) {
+            prefix[j++] = infix[i];
+        } else if (infix[i] == ')') {
+            stack[++top] = infix[i];
+        } else if (infix[i] == '(') {
+   while (top != -1 && stack[top] != ')') {
+                prefix[j++] = stack[top--];
+            }
+            if (top != -1)
+                top--;
+        } else if (isOperator(infix[i])) {
+   while (top != -1 && precedence(stack[top]) 
+      > precedence(infix[i])) {
+                prefix[j++] = stack[top--];
+            }
+            stack[++top] = infix[i];
+        }
+    }
+
+    while (top != -1) {
+        prefix[j++] = stack[top--];
+    }
+
+    prefix[j] = '\0';
+    strrev(prefix);
+}
+
+int main() {
+    char infix[MAX_SIZE], prefix[MAX_SIZE];
+    printf("Enter an infix expression: ");
+    gets(infix);
+    infixToPrefix(infix, prefix);
+    printf("Prefix expression: %s\n", prefix);
+    return 0;
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc infixtoprefix.c
+PS G:\C Language> .\a.exe
+Enter an infix expression: A+B*C
+Prefix expression: +A*BC
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

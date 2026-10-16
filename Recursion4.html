@@ -1,0 +1,46 @@
+
+
+<html>
+<head>
+<title>RECURSION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Recursion Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+int find(int decimal_number)
+{
+    if (decimal_number == 0) 
+        return 0; 
+    else
+        return (decimal_number % 2 + 10 * 
+        find(decimal_number / 2));
+}
+int main()
+{
+    int decimal_number;
+    printf("Enter a decimal number to convert : ");
+    scanf("%d",&decimal_number);
+    printf("%d", find(decimal_number));
+    return 0;
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter a decimal number to convert : 9
+1001
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

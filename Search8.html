@@ -1,0 +1,63 @@
+
+
+<html>
+<head>
+<title>SEARCHING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Search Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+void main(){
+    int n,i,low,high,mid;
+    char a;
+    printf("Enter size of string : ");
+    scanf("%d",&n);
+    char arr[n];
+    printf("Enter string :");
+    scanf("%s",arr);
+    printf("Enter element to find : ");
+    fflush(stdin);
+    scanf("%c",&a);
+    low=0;
+    high=n-1;
+    while(low<=high){
+    mid=(low+high)/2;
+    if(arr[mid] < a){
+    low=mid+1;}
+    else if(arr[mid] == a){
+    printf("%c found at the location %d",
+    a,mid+1);
+    printf("\n");
+    break;
+    }
+    else{
+    high=mid-1;
+    }}
+    if(low > high){
+ printf("%c is not present in the array",a); 
+}}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size of string : 6
+Enter string :madhu
+Enter element to find : h
+h found at the location 4
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>
+
+

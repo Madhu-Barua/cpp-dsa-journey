@@ -1,0 +1,66 @@
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< string.h >
+void selectionsort(char a[][30],int beginindex,
+    int size){
+    char temp[30];
+    if(beginindex>=size-1)
+    return;
+    int minindex=beginindex;
+    for(int i=beginindex;i < size;i++){
+          if(strcmp(a[i],a[minindex])<0){
+            minindex=i;
+          }  
+        }
+   strcpy(temp,a[minindex]);
+   strcpy(a[minindex],a[beginindex]);
+   strcpy(a[beginindex],temp);
+   selectionsort(a,beginindex+1,size);
+}
+void main(){
+    int i,size;
+    printf("Enter number of elements 
+    you want : ");
+    scanf("%d",&size);
+    char a[size][30];
+    printf("Enter elements of array : ");
+    for(i=0;i < size;i++){
+        scanf("%s",a[i]);
+    }
+    selectionsort(a,0,size-1);
+    printf("Sorted Array : ");
+    for(i=0;i < size;i++){
+        printf("%s\t",a[i]);   
+    }
+    printf("\n");
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter number of elements you want : 4
+Enter elements of array : madhu guddu 
+anu muskan
+Sorted Array : anu guddu madhu muskan	
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

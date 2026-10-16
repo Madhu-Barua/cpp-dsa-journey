@@ -1,0 +1,85 @@
+
+
+<html>
+<head>
+<title>STACK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Stack button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+int push(char *arr,int n,int top){
+    if(top==n){
+        return -2;
+    }
+    else{
+        top++;
+        arr[top]='(';
+        return top;
+    }
+}
+int pop(char *arr,int n,int top){
+    if(top==-1){
+        return -2;
+    }
+    else{
+        top--;
+        return top;
+    }
+}
+int main(){
+    char eq[5],stack[5];
+    int top=-1;
+    int i;
+    puts("Enter expression : ");
+    gets(eq);
+    for(i=0;eq[i]!='\0';i++){
+        if(eq[i]=='('){
+            top=push(stack,4,top);
+        if(top==-2){
+            break;
+        }}
+        else if(eq[i]==')'){
+            top=pop(stack,4,top);
+        if(top==-2){
+            break;
+        }
+        else
+        continue;
+        }
+    }
+   
+    if(top!=-1){
+        printf("Not Balanced");
+    }
+    else{
+        printf("Balanced");
+    }
+    return 0;
+}
+ 
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc bracketmatchstack.c
+PS G:\C Language> .\a.exe
+Enter expression :
+()()
+Balanced
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

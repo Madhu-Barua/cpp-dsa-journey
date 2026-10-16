@@ -1,0 +1,213 @@
+
+
+<html>
+<head>
+<title>QUEUE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Queue Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+void isFull(int *queue,int size,int rear,
+  int front){
+  if(front==(rear+1)%size){
+  printf("Queue is full\n");}
+  else{
+  printf("Queue is not full\n");
+  }}
+void isEmpty(int *queue,int size,int rear,
+  int front){
+  if(front==-1 && rear==-1){
+  printf("Queue is Empty.\n");}
+  else{
+  printf("Queue is not Empty.\n");
+  }}
+int enqueue(int *queue,int size,int item,
+  int rear,int front){
+  if(rear==-1 && front ==-1){
+  rear=front=0;
+  queue[rear]=item;
+  return rear;
+  }
+  else{
+  rear=(rear+1)%size;
+  queue[rear]=item;
+  return rear;
+  }}
+
+int dequeue(int *queue,int size,int item,
+  int rear,int front){
+  if(rear==front){
+  rear=front=-1;
+  }
+  else{
+  front=front+1;
+  return front;
+  }}
+
+int display(int *queue,int size,int rear,
+   int front){
+   int i=front;  
+   if(front==-1 && rear==-1){  
+   printf("\n Queue is empty..");}
+   else{
+   printf("\nElements in a Queue are :");  
+   while(i!=rear){  
+   printf("%d,",queue[i]);  
+   i=(i+1)%size;  
+   } 
+   printf("%d,",queue[i]); 
+   }}  
+
+int peek(int *queue,int size,int front){
+   return front;
+}
+
+void main(){
+  int rear=-1,front=-1;
+  int size;
+  printf("Enter size : ");
+  scanf("%d",&size);
+  int item,queue[size],choice,i;
+  while(1){
+  printf("\nEnter your choice ; 1 for enqueue(),
+  2 for dequeue(),3 for display,4 for peek(),
+  5 for isFull(),6 for IsEmpty,7 for Exit :\n");
+  scanf("%d",&choice);
+  switch (choice)
+    {
+ case 1 : if(front==(rear+1)%size){
+    printf("Queue is full\n");}
+    else{
+    printf("Enter value : ");
+    scanf("%d",&item);
+    rear=enqueue(queue,size,item,rear,front);
+    printf("The inserted value is : %d\n",
+    queue[rear]);
+    }
+    break;
+  case 2 : if(front==-1 && rear==-1){
+    printf("Queue is Empty\n");}
+    else{
+    front = dequeue(queue,size,item,rear,front);
+    printf("The deleted value is : %d\n",
+    queue[front]);
+    front++;
+    }        
+    break;
+  case 3 : display(queue,size,rear,front);  
+    break;
+  case 4 : if(front==-1 && rear==-1){
+    printf("Queue is Empty\n");
+    }
+    else{
+    front=peek(queue,size,front);
+    printf("The front value is : %d\n",
+    queue[front]);
+    }
+    break;
+  case 5 : isFull(queue,size,rear,front);
+          break;
+  case 6 : isEmpty(queue,size,rear,front);
+          break;
+  case 7 : printf("Exited!\n");
+           exit(0);
+          break;
+  default:printf("Invalid choice!\n");
+    }}}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size : 5
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+1
+Enter value : 2
+The inserted value is : 2
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+1
+Enter value : 3
+The inserted value is : 3
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+1
+Enter value : 4
+The inserted value is : 4
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+1
+Enter value : 5
+The inserted value is : 5
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+1
+Enter value : 6
+The inserted value is : 6
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+2
+The deleted value is : 2
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+1
+Enter value : 7
+The inserted value is : 7
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+3
+Elements in a Queue are :3,4,5,6,7,
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+4
+The front value is : 3
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+5
+Queue is full
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+6
+Queue is not Empty.
+
+Enter your choice ; 1 for enqueue(),
+2 for dequeue(),3 for display,4 for peek(),
+5 for isFull(),6 for IsEmpty,7 for Exit :
+7
+Exited!
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

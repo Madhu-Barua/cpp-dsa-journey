@@ -1,0 +1,65 @@
+
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+void selectionsort(int a[],int beginindex,
+int size){
+    if(beginindex >= size-1){
+    return;
+    }
+    else{
+    int minindex=beginindex;
+    for(int i = beginindex; i < size;i++){
+    if(a[i] < a[minindex]){
+      minindex=i;
+          }  
+        }
+    int temp=a[minindex];
+    a[minindex]=a[beginindex];
+    a[beginindex]=temp;
+    selectionsort(a,beginindex+1,size);
+}}
+void main(){
+    int i,size;
+    printf("Enter number of elements 
+    you want : ");
+    scanf("%d",&size);
+    int a[size];
+    printf("Enter elements of array : ");
+    for(i=0;i < size;i++){
+        scanf("%d",&a[i]);
+    }
+    selectionsort(a,0,size);
+    printf("Sorted Array : ");
+    for(i=0;i < size;i++){
+        printf("%d\t",a[i]);   
+    }
+    printf("\n");
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter number of elements you want : 4
+Enter elements of array : 6 8 2 4
+Sorted Array : 2 4 6 8	
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

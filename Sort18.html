@@ -1,0 +1,87 @@
+
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< string.h >
+void ms(char arr[][30] ,int l,int m,int u);
+void mergesort(char arr[][30],int l,int u){
+    int mid;
+    if(l < u){
+        mid=(l+u)/2;
+        mergesort(arr,l,mid);
+        mergesort(arr,mid+1,u);
+        ms(arr,l,mid,u);
+    }
+}
+void ms(char arr[][30] ,int l,int m,int u){
+   int i=l,j=m+1;
+   char arr2[5][30];
+   int k=l;
+   while(i <= m && j <= u)
+    {if(strcmp(arr[i],arr[j])<0){
+        strcpy(arr2[k],arr[i]);
+        i++;
+    }
+    else{
+        strcpy(arr2[k],arr[j]);
+        j++;
+       }
+    k++;
+    }
+          
+   if(i>m){
+    while(j <= u){
+    strcpy(arr2[k],arr[j]);
+        j++;
+        k++;
+    }
+   }
+   else{
+    while(i <= m){
+            strcpy(arr2[k],arr[i]);
+        i++;
+        k++;
+    }
+   }
+  
+for(int i=l;i<=u;i++){
+strcpy(arr[i],arr2[i]);}
+}
+int main()
+{
+char arr[5][30]={"madhu","anu","savita","heena"};
+mergesort(arr,0,4);
+printf("The string in ascending order : ");
+for(int i=0;i<5;i++){
+printf("%s\n",arr[i]);}
+return 0;
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+The string in ascending order : 
+anu
+heena
+madhu
+savita
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

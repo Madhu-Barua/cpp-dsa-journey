@@ -1,0 +1,48 @@
+
+
+<html>
+<head>
+<title>RECURSION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Recursion Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >  
+long factorial(int n)  
+{  
+  if (n == 0)  
+    return 1;  
+  else  
+    return(n * factorial(n-1));  
+}  
+void main()  
+{  
+  int number;  
+  long fact;  
+  printf("Enter a number: ");  
+  scanf("%d", &number);   
+  fact = factorial(number);  
+  printf("Factorial of %d is %ld\n", 
+  number, fact);  
+}  
+  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter a number: 5
+Factorial of 5 is 120
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

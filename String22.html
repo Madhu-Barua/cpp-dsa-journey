@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+void main(){
+   char str[7];
+   int i,j,temp,len;
+   puts("Enter string : ");
+   gets(str);
+   printf("String before sorting : %s\n",str);
+   len=strlen(str);
+   for(i=0;i<len-1;i++){
+    for(j=0;j<len-i-1;j++){
+        if(str[j]>str[j+1]){
+        temp=str[j];
+        str[j]=str[j+1];
+        str[j+1]=temp;
+    }}}
+   printf("String after sorting : %s\n",str);
+   }
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web43.c
+PS G:\C Language> .\a.exe
+Enter string :
+madhu
+String before sorting : madhu
+String after sorting : adhmu
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

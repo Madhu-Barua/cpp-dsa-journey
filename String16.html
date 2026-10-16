@@ -1,0 +1,61 @@
+
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+int main() {
+    int size;
+    printf("Enter size of string: ");
+    scanf("%d", &size);
+    char str[size], ch;
+    printf("Enter string: ");
+    scanf("%s", str);
+    printf("The string is: %s\n", str);
+    printf("Enter character to search: ");
+    scanf(" %c", &ch);
+    int found = 0,index=0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ch) {
+            found = 1;
+            break;
+        }
+        index++;
+    }
+    if (found) {
+    printf("The character is found at 
+    %d position\n",index);
+    } else {
+    return -1;
+    }
+    
+    return 0;
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size of string: 11
+Enter string: madhubarua
+The string is: madhubarua
+Enter character to search: r
+The character is found at 7 index
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

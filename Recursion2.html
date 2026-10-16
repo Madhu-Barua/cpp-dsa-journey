@@ -1,0 +1,50 @@
+
+
+<html>
+<head>
+<title>RECURSION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Recursion Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >    
+void printFibonacci(int n){    
+    static int n1=0,n2=1,n3;    
+    if(n>0){    
+         n3 = n1 + n2;    
+         n1 = n2;    
+         n2 = n3;    
+         printf("%d ",n3);    
+         printFibonacci(n-1);    
+    }    
+}    
+int main(){    
+    int n;    
+    printf("Enter the number of elements: ");    
+    scanf("%d",&n);    
+    printf("Fibonacci Series: ");    
+    printf("%d %d ",0,1);    
+    printFibonacci(n-2);    
+    return 0;  
+ }     
+  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter the number of elements: 5
+Fibonacci Series: 0 1 1 2 3 
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

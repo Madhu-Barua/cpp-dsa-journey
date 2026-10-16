@@ -1,0 +1,53 @@
+
+
+<html>
+<head>
+<title>ARRAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="1-D Array Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<h2>
+<pre> 
+#include< stdio.h >
+#include< conio.h >
+void main(){
+ int arr[5],arr1[5],i;
+ for(i=0;i<5;i++){
+    arr1[i]=arr[i];
+ }
+ printf("Enter the elements of first array : ");
+ for(i=0;i<5;i++){
+    scanf("%d",&arr[i]);
+ }
+ printf("Elements of first array are : ");
+ for(i=0;i<5;i++){
+    printf("%d",arr[i]);
+ }
+ printf("\nElements of second array are : ");
+ for(i=0;i<5;i++){
+   arr1[i]=arr[i];
+    printf("%d",arr1[i]);}
+ getch();
+}
+</pre>
+</h2>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web3.c
+PS G:\C Language> .\a.exe
+Enter the elements of first array : 1 2 3 4 5
+Elements of first array are : 12345
+Elements of second array are : 12345
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

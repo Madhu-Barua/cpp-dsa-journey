@@ -1,0 +1,186 @@
+
+
+<html>
+<head>
+<title>QUEUE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Queue Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>  
+#include< stdio.h >
+#include< stdlib.h >
+int rear=-1,front=-1;
+void isFull(char queue[][30],int size){
+  if(front==((rear+1)%size)){
+  printf("Queue is full\n");}
+  else{
+  printf("Queue is not full\n");
+  }}
+void isEmpty(char queue[][30],int size){
+  if(front==-1 && rear==-1){
+  printf("Queue is Empty.\n");}
+  else{
+  printf("Queue is not Empty.\n");
+  }}
+void enqueue(char queue[][30],int size){
+  if(front==((rear+1)%size)){
+  printf("Queue is full\n");
+  }
+  else if(rear==-1 && front ==-1){
+  rear=front=0;
+  printf("\nEnter string to insert : ");
+  scanf("%s",&queue[rear]);
+  printf("The inserted value is : %s\n",
+  queue[rear]);
+  }
+  else{
+  rear=(rear+1)%size;
+  printf("\nEnter string to insert : ");
+  scanf("%s",&queue[rear]);
+  printf("The inserted value is : %s\n",
+  queue[rear]);
+  }}
+
+void dequeue(char queue[][30],int size){
+  if(rear==front){
+  printf("The deleted value is : %s\n",
+  queue[front]);
+  rear=front=-1;
+  }
+  else{
+  printf("The deleted value is : %s\n",
+  queue[front]);   
+  front=front+1;
+  }}
+
+void display(char queue[][30],int size){
+   int i=front;  
+   if(front==-1 && rear==-1){  
+   printf("\n Queue is empty..");}
+   else{
+   printf("\nElements in a Queue are :");  
+   while(i!=rear){  
+   printf("%s,",queue[i]);  
+   i=(i+1)%size;  
+   } 
+   printf("%s,",queue[i]); 
+   }
+    printf("\n");
+}  
+
+void peek(char queue[][30],int size){
+   if(front==-1 && rear==-1){
+  printf("Queue is Empty.\n");}
+  else{
+  printf("Thr front value is : %s",
+  queue[front]);
+  }
+}
+
+void main(){
+  int size,choice;
+  printf("Enter size : ");
+  scanf("%d",&size);
+  char queue[size][30];
+  while(1){
+printf("\nEnter your choice ; 1 for 
+enqueue(),2 for dequeue(),3 for display,
+4 for peek(),5 for isFull(),6 for IsEmpty,
+7 for Exit :\n");
+  scanf("%d",&choice);
+  switch (choice)
+    {
+ case 1 :enqueue(queue,size);
+    break;
+  case 2 : dequeue(queue,size);
+    break;
+  case 3 : display(queue,size);  
+    break;
+  case 4 : peek(queue,size);
+    break;
+  case 5 : isFull(queue,size);
+    break;
+  case 6 : isEmpty(queue,size);
+    break;
+  case 7 : printf("Exited!\n");
+           exit(0);
+    break;
+  default:printf("Invalid choice!\n");
+    }}} 
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size : 3
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :1
+Enter string to insert : madhu
+The inserted value is : madhu
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :1
+Enter string to insert : jyoti
+The inserted value is : jyoti
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :1
+Enter string to insert : chiku
+The inserted value is : chiku
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :1
+Queue is full
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :2
+The deleted value is : madhu
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :1
+Enter string to insert : savita
+The inserted value is : savita
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :4
+Thr front value is : jyoti
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :3
+Elements in a Queue are :jyoti,chiku,savita,
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :5
+Queue is full
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :6
+Queue is not Empty.
+
+Enter your choice ; 1 for enqueue(),2 for 
+dequeue(),3 for display,4 for peek(),5 for 
+isFull(),6 for IsEmpty,7 for Exit :7
+Exited!
+
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

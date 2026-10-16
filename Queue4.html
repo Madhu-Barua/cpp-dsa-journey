@@ -1,0 +1,162 @@
+
+
+<html>
+<head>
+<title>QUEUE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Queue Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+struct queue{
+    char data[15];
+    struct queue*next;
+}*front=NULL,*rear=NULL,*newnode,*temp;
+ 
+void isFull(){
+    newnode=(struct queue*)malloc
+   (sizeof(struct queue));
+    if(newnode==NULL)
+    printf("Queue is Full");
+    else
+    printf("Queue is not Full");
+}
+
+void isEmpty(){
+    if(front==NULL)
+    printf("Queue is Empty");
+    else
+    printf("Queue is not Empty");
+}
+int enqueue(){
+    char value[10];
+    newnode=(struct queue*)malloc
+   (sizeof(struct queue));
+    if(newnode==NULL)
+    printf("Overflow");
+    else{
+    printf("Enter value to insert : ");
+    scanf("%s",&(newnode->data));
+    newnode->next=NULL;
+    printf("%s",newnode->data);
+    if(front==NULL && rear==NULL){
+         front=rear=newnode;}
+    else{
+        rear->next=newnode;
+        rear=newnode;
+    }}}
+
+int dequeue(){
+   temp=front;
+   if(front==NULL){
+       printf("Underflow");
+   }
+   else{
+       printf("%s",front->data);
+       front=front->next;
+       free(temp);
+   }}
+
+void peek(){
+   if(front==NULL){
+    printf("Underflow");
+   }
+   else{
+    printf("%s",front->data);
+   }}
+
+void display(){
+    struct queue *temp;
+    temp=front;
+    if(front==NULL){
+            printf("Underflow");
+        }
+    else{
+    while(temp!=rear){
+        printf("%s\t",temp->data);
+        temp=temp->next;
+    }
+    printf("%s",temp->data);
+    }}
+void main(){
+   int choice;
+   while(1){
+   printf("\nPress 1 for isFull(),2 for isEmpty(),
+     3 for enqueue(),4 for dequeue(),5   
+   for peek(),6 for display(),7 for exit : ");
+   scanf("%d",&choice);
+   switch(choice){
+     case 1 : isFull();
+              break;
+     case 2 : isEmpty();
+              break;
+     case 3 : enqueue();
+              break;
+     case 4 : dequeue();
+              break;
+     case 5 : peek();
+              break;
+     case 6 : display();
+              break;
+     case 7 : printf("Exited!");
+              exit(0);
+              break;
+     default: printf("Invalid Choice");
+          }
+      }
+  }  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 3
+Enter value to insert : madhu
+madhu
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 3
+Enter value to insert : jyotika
+jyotika
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 3
+Enter value to insert : monika
+monika
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 3
+Enter value to insert : jyoti
+jyoti
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 4
+madhu
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 5
+jyotika
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 6
+jyotika	monika	jyoti
+Press 1 for isFull(),2 for isEmpty(),
+3 for enqueue(),4 for dequeue(),5 for 
+peek(),6 for display(),7 for exit : 7
+Exited!
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

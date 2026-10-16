@@ -1,0 +1,60 @@
+
+
+
+
+<html>
+<head>
+<title>ARRAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="1-D Array Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void main(){
+ int arr[5],size,i,j,k,temp;
+ printf("Enter number of elements : ");
+    scanf("%d",&size);
+ printf("Enter the elements of an array : ");
+ for(i=0;i < size;i++){
+    scanf("%d",&arr[i]);
+ }
+ for(i=0;i < size;i++){
+    for(j=i+1;j < size;j++){
+        if(arr[i] == arr[j]){
+        for(k=j;k < size;k++){
+            arr[k]=arr[k+1];
+        }
+        size--;
+        j--;
+        }}}
+ printf("Remaining elements of an array : ");
+ for(i=0;i < size;i++){
+    printf("%d",arr[i]);
+ }
+ printf("\n");
+ getch();
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<pre>
+<h2>
+PS G:\C Language> gcc web12.c
+PS G:\C Language> .\a.exe
+Enter number of elements : 5
+Enter the elements of an array : 1 2 2 3 3
+Remaining elements of an array : 123
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

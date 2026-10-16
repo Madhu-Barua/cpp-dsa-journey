@@ -1,0 +1,61 @@
+
+
+<html>
+<head>
+<title>SEARCHING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Search Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+void main(){ 
+    int n,i,loc=0;
+    char item;
+    printf("Enter size of string : ");
+    scanf("%d",&n);
+    char a[n];
+    printf("Enter string : ");
+    scanf("%s",a);
+    printf("Enter element to search : ");
+    fflush(stdin);
+    scanf("%c",&item);
+    printf("Linear Search");
+    printf("\n");
+    for(i=0;a[i]!='\0';i++){
+        if(a[i]==item){
+            loc=i+1;
+            break;
+        }
+    }
+    if(loc>0){
+        printf("Search Successful, %c 
+    Element  found at %d pos",item,loc);
+        printf("\n");}
+    else{
+        printf("Search Unsuccessful\n");
+    }
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size of string : 6
+Enter string : madhu
+Enter element to search : d
+Linear Search
+Search Successful, d Element  found at 3 pos
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

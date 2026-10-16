@@ -1,0 +1,69 @@
+
+
+
+<html>
+<head>
+<title>STACK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Stack button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< string.h >
+void push(char stack[], int *top, char c,
+int MAX_SIZE) {
+    if (*top >= MAX_SIZE - 1) {
+        printf("Stack overflow\n");
+        return;
+    }
+    stack[++(*top)] = c;
+}
+char pop(char stack[], int *top,int MAX_SIZE){
+    int MAZ_SIZE;
+    if (*top < 0) {
+        printf("Stack is empty\n");
+        return '\0';
+    }
+    return stack[(*top)--];
+}
+int main() {
+    int MAX_SIZE;
+    printf("Enter size of string : ");
+    scanf("%d",&MAX_SIZE);
+    char input[MAX_SIZE];
+    char stack[MAX_SIZE];
+    printf("Enter a string: ");
+    scanf("%s",&input);
+    int top=-1;
+    for (int i = 0; i < MAX_SIZE - 1; i++) {
+        push(stack, &top, input[i],MAX_SIZE);
+    }
+    printf("Reversed string: ");
+    while (top >= 0) {
+    printf("%c", pop(stack, &top,MAX_SIZE));
+    }
+    printf("\n");
+
+    return 0;
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter size of string : 6
+Enter a string: MADHU
+Reversed string: UHDAM
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

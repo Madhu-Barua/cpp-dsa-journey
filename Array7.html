@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<title>ARRAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="1-D Array Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void main(){
+ int arr[5],arr1[5],i;
+ printf("Enter the elements of an array : ");
+ for(i=0;i<5;i++){
+    scanf("%d",&arr[i]);
+ }
+ printf("Elements of an array are : ");
+ for(i=0;i<5;i++){
+    printf("%d",arr[i]);
+ }
+ printf("\nElements of squares array are : ");
+ for(i=0;i<5;i++){
+    arr1[i]=arr[i]*arr[i];
+    printf("\n%d",arr1[i]);
+ }
+ getch();
+}
+
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<pre>
+<h2>
+PS G:\C Language> gcc web7.c
+PS G:\C Language> .\a.exe
+Enter the elements of an array : 1 2 3 4 5
+Elements of an array are : 12345
+Elements of squares array are :
+1
+4
+9
+16
+25
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

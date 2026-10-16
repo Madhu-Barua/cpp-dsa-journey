@@ -1,0 +1,69 @@
+
+
+
+<html>
+<head>
+<title>SEARCHING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Search Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+int recursion(int a[],int item,int index,
+     int size){
+     int pos=0;
+     if(index >= size){
+        return 0;
+     }
+    else if(a[index]==item){
+      pos=index+1;
+      return pos;
+      }
+      else{
+      return recursion(a,item,index+1,size);
+      }
+      return pos;
+}
+void main(){
+    int size,pos,item,i;
+    printf("How many elements : ");
+    scanf("%d",&size);
+    int a[size];
+    printf("Enter Array : ");
+    for(i=0;i < size;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Enter element to search : ");
+    scanf("%d",&item);
+    pos = recursion(a,item,0,size); 
+    if(pos!=0)
+    printf("%d element is found at 
+    the location :%d\n",item,pos);
+    else
+    printf("Element not found");
+    }
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc linearsearchrecursion.c
+PS G:\C Language> .\a.exe
+How many elements : 5
+Enter Array : 1 3 5 7 8
+Enter element to search : 5
+5 element is found at the location : 3
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

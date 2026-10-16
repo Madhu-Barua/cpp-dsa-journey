@@ -1,0 +1,59 @@
+
+
+<html>
+<head>
+<title>RECURSION</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Recursion Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+
+#include< stdio.h >
+double calculateArithmeticMean(int numbers[], 
+int n, int currentIndex) {
+    if (currentIndex == n) {
+        return 0.0;
+    }
+double sumOfRemaining = calculateArithmeticMean
+ (numbers, n, currentIndex + 1);
+    sumOfRemaining += numbers[currentIndex];
+
+    return sumOfRemaining;
+}
+
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int numbers[n];
+    printf("Enter %d numbers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+    double mean = calculateArithmeticMean
+    (numbers, n, 0) / n;
+    printf("Arithmetic Mean: %lf\n", mean);
+    return 0;
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter the number of elements: 5
+Enter 5 numbers:
+5 10 15 20 25 
+Arithmetic Mean: 15.000000
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

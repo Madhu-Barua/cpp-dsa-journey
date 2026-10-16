@@ -1,0 +1,59 @@
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+int search(char[],int,char);
+int main(){
+    char str[10],ch;
+    int i=0,res;
+    printf("Enter the string: ");
+    scanf("%s",str);
+    printf("Enter the charcter to be found: ");
+    ch = getche();
+    res=search(str,10,ch);
+    if(res==-1)
+    printf("\nNot found!");
+    else
+    printf("\nFound!");
+}
+int search(char str[],int size,char ch){
+    int i;
+    while(str[i]!='\0'){
+        if(str[i]==ch){
+        return 0;
+        }
+        i++;
+    }
+    if(str[i]=='\0')
+    return -1;
+} 
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web35.c
+PS G:\C Language> .\a.exe
+Enter the string: madhu
+Enter the charcter to be found: e
+Not found!	
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

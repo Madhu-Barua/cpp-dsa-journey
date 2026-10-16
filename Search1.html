@@ -1,0 +1,62 @@
+
+
+<html>
+<head>
+<title>SEARCHING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Search Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void main(){
+    int a[5],n,i,loc=0,item;
+    printf("How many elements : ");
+    scanf("%d",&n);
+    printf("Enter Array : ");
+    for(i=0;i < n;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Enter element to search : ");
+    scanf("%d",&item);
+    printf("Linear Search");
+    printf("\n");
+    for(i=0;i < n;i++){
+        if(a[i]==item){
+            loc=i+1;
+            break;
+        }
+    }
+    if(loc>0){
+        printf("Search Successful, Element 
+       found at %d pos",loc);
+        printf("\n");}
+    else{
+        printf("Search Unsuccessful\n");
+    }
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc linearsearch.c
+PS G:\C Language> .\a.exe
+How many elements : 5
+Enter Array : 1 4 2 5 3
+Enter element to search : 2
+Linear Search
+Search Successful, Element found at 3 pos
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

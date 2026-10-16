@@ -1,0 +1,65 @@
+
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< string.h >
+void insertionsort(char a[][30],int n){
+    char temp[30];
+    if(n<=1)
+    return;
+    insertionsort(a,n-1);
+    strcpy(temp,a[n-1]);
+    int j = n-2;
+    while(j>=0 && strcmp(a[j],temp)>0){
+        strcpy(a[j+1],a[j]);
+        j--;
+    }
+    strcpy(a[j+1],temp);
+    }        
+
+void main(){
+    int i,n;
+    printf("Enter number of elements 
+    you want : ");
+    scanf("%d",&n);
+    char a[n][30];
+    printf("Enter elements of array : ");
+    for(i=0;i < n;i++){
+        scanf("%s",a[i]);
+        }
+    insertionsort(a,n);
+    printf("Sorted Array : \n");
+    for(i=0;i < n;i++)
+    {
+        printf("%s\n",a[i]);
+    }}    
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter number of elements you want : 3
+Enter elements of array : madhu anu guduu
+Sorted Array : 
+anu
+guduu
+madhu
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

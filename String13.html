@@ -1,0 +1,50 @@
+
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+void main(){
+    char str1[10],temp;
+    int i,length;
+    puts("Enter a string : ");
+    gets(str1);
+    printf("Before reverse of string is : %s ",str1);
+    length=strlen(str1)-1;
+    for(i=0;i < strlen(str1)/2;i++){
+        temp=str1[i];
+        str1[i]=str1[length];
+        str1[length--]=temp;
+    }
+    printf("\nAfter reverse of string is : %s ",str1);
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web33.c
+PS G:\C Language> .\a.exe
+Enter a string :
+Madhu
+Before reverse of string is : Madhu
+After reverse of string is : uhdaM
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

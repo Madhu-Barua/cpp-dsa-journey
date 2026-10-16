@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<title>STRING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="String Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+#include< string.h >
+void main(){
+char s[5];
+int i,length=0;
+printf("Enter a string : ");
+gets(s);
+for(i=0;s[i]!='\0';i++){
+length++;
+}
+printf("Length of string is : %d \n",length);
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc web26.c
+PS G:\C Language> .\a.exe
+Enter a string : madhu
+Length of string is : 6
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

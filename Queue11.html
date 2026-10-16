@@ -1,0 +1,183 @@
+
+
+<html>
+<head>
+<title>QUEUE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Queue Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+struct node
+	{
+	int priority;
+	int info;
+	struct node *link;
+}*front = NULL,*rear=NULL,*newnode,
+*temp,*ptr;
+void isFull(){
+    newnode=(struct node*)malloc
+   (sizeof(struct node));
+    if(newnode==NULL)
+    printf("Queue is Full");
+    else
+    printf("Queue is not Full");
+}
+
+void isEmpty(){
+    if(front==NULL)
+    printf("Queue is Empty");
+    else
+    printf("Queue is not Empty");
+}
+void peek(){
+   if(front==NULL){
+    printf("Underflow");
+   }
+   else{
+    printf("%d",front->info);
+   }
+   }
+void enqueue()
+{   int item,priority;
+	newnode = (struct node*)malloc
+        (sizeof(struct node));
+	printf("Input the item value to be
+        added in the queue : ");
+	scanf("%d",&item);
+	printf("Enter its priority : ");
+	scanf("%d",&priority);
+	newnode->info = item;
+	newnode->priority = priority;
+	if( front == NULL || priority < 
+        front->priority )
+	{
+	   front=rear=newnode;
+	}
+	else
+	{
+		rear->link=newnode;
+        rear=newnode;
+	}
+}
+void dequeue()
+{
+	struct node *temp;
+	if(front == NULL)
+		printf("Queue Underflow");
+	else
+	{
+		temp = front;
+   printf("Deleted item is %d",temp->info);
+		front = front->link;
+		free(temp);
+	}
+}
+void display()
+{
+	struct node *ptr;
+	ptr = front;
+	if(front == NULL)
+		printf("Queue is empty");
+	else
+	{	
+		while(ptr != NULL)
+		{
+   printf("Priority Item : %d\tValue :%d\n",
+   ptr->priority,ptr->info);
+			ptr = ptr->link;
+		}
+	}
+}
+void main()
+{
+	int choice;
+	while(1){
+  print("\nPress 1.Enqueue,2.Dequeue,3.Display,
+  4.isFull,5.isEmpty,6.peek,7.Exit : ");
+        scanf("%d", &choice);
+	switch(choice){
+	case 1:enqueue();
+	break;
+	case 2:dequeue();
+	break;
+	case 3:display();
+	break;
+	case 4:isFull();
+	break;
+	case 5:isEmpty();
+	break;
+	case 6:peek();
+        break;
+	case 7:printf("Exited!");
+	exit(0);
+	break;
+	default :
+	printf("Wrong choice\n");
+		}}}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 1
+Input the item value to be added in 
+the queue : 2
+Enter its priority : 1
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 1
+Input the item value to be added in 
+the queue : 3
+Enter its priority : 2
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 1
+Input the item value to be added in 
+the queue : 4
+Enter its priority : 3
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 1
+Input the item value to be added in 
+the queue : 5
+Enter its priority : 4
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 2
+Deleted item is 2
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 3
+Priority Item : 2	Value :3
+Priority Item : 3	Value :4
+Priority Item : 4	Value :5
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 4
+Queue is not Full
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 5
+Queue is not Empty
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 2
+Deleted item is 3
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 3
+Priority Item : 3	Value :4
+Priority Item : 4	Value :5
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 6
+4
+Press 1.Enqueue,2.Dequeue,3.Display,
+4.isFull,5.isEmpty,6.peek,7.Exit : 7
+Exited!
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

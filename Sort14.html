@@ -1,0 +1,63 @@
+
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< string.h >
+void bubblesort(char a[][30],int size){
+    char temp[30];
+    if(size==0)
+    return;
+    else
+    for(int i=0;i <size;i++){
+          if(strcmp(a[i],a[i+1])>0){
+            strcpy(temp,a[i]);
+            strcpy(a[i],a[i+1]);
+            strcpy(a[i+1],temp);
+          }  
+        }
+    bubblesort(a,size-1);
+}
+void main(){
+    int i,size;
+    printf("Enter number of elements 
+    you want : ");
+    scanf("%d",&size);
+    char a[size][30];
+    printf("Enter elements of array : ");
+    for(i=0;i < size;i++){
+        scanf("%s",a[i]);
+    }
+    bubblesort(a,size-1);
+    printf("Sorted Array : ");
+    for(i=0;i < size;i++){
+        printf("%s\t",a[i]);   
+    }
+    printf("\n");
+}  
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Enter number of elements you want : 3
+Enter elements of array : guddu madhu anu
+Sorted Array : anu guddu madhu	
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

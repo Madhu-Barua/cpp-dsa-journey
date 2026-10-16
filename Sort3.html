@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<title>SORTING</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Sort Button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< conio.h >
+void main(){
+    int i,j,temp,a[10],n;
+    printf("Enter number of elements you want : ");
+    scanf("%d",&n);
+    printf("Enter elements of array : ");
+    for(i=0;i < n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i < n-1;i++){
+        for(j=0;j < n-i-1;j++){
+          if(a[j] > a[j+1]){
+            temp=a[j];
+            a[j]=a[j+1];
+            a[j+1]=temp;
+          }  
+        }
+    }
+    printf("Sorted Array : \n");
+    for(i=0;i < n;i++){
+        printf("%d",a[i]);   
+    }
+    printf("\n");
+}
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+PS G:\C Language> gcc bubblesort.c
+PS G:\C Language> .\a.exe
+Enter number of elements you want : 5
+Enter elements of array : 23 45 67 12 23
+Sorted Array :
+12
+23
+23
+45
+67
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html>

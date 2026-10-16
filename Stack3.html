@@ -1,0 +1,159 @@
+
+
+<html>
+<head>
+<title>STACK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col1">
+<button class="btn"><a href="Stack button.html">BACK</a></button>
+<h1 align="center">INPUT</h1>
+<pre>
+<h2>
+#include< stdio.h >
+#include< stdlib.h >
+struct stack{
+    int value;
+    struct stack *next;
+    };
+    struct stack *top=NULL;
+    
+  void push(int value){
+  struct stack *new;
+  new =(struct stack*)malloc(sizeof(struct stack));
+  if(new==NULL){
+  printf("Stack is Full");
+  }
+  printf("Enter a value : ");
+  scanf("%d",&value);
+  new->value=value;
+  new->next=NULL;
+  new->next=top;
+  top=new;    
+     }
+    
+  int pop(){
+  struct stack*temp;
+  temp=top;
+  if(top==NULL){
+  printf("Stack is Empty");
+  }
+  else{
+  printf("%d",top->value);
+  top=top->next;
+  free(temp);
+    }}
+  void peek(){
+  if(top==NULL){
+  printf("Stack is Empty");
+  }
+  else{
+  printf("%d",top->value);
+  }}
+  void display(){
+  struct stack *temp;
+  temp=top;
+  if(top==NULL){
+  printf("Stack is Empty");
+  }
+  else{
+  while(temp!=NULL){
+  printf("%d",temp->value);
+  temp=temp->next;
+            }}}
+  void isFull(){
+  struct stack *new;
+  new =(struct stack*)malloc
+  (sizeof(struct stack));
+  if(new==NULL){
+  printf("Overflow");
+        }
+      else{
+          printf("Stack is not full");
+      }
+  }
+  void isEmpty(){
+  if(top==NULL){
+  printf("Underflow");
+        }
+      else{
+          printf("Stack is not Empty");
+      }
+  }
+void main(){
+    int choice,value;
+    while(1){
+    printf("\nPress 1 for push(),
+    2 for pop,3 for peek(),4 display(),
+    5 for isFull(),6 for isEmpty(),
+    7 for exit : ");
+        scanf("%d",&choice);
+    switch(choice){
+    case 1 : push(value);
+             break;
+    case 2 : pop();
+             break;
+    case 3 : peek();
+             break;
+    case 4 : display();
+             break;
+    case 5 : isFull();
+             break;
+    case 6 : isEmpty();
+             break;         
+    case 7 : printf("Exited!\n");
+             exit(0);
+             break;
+   default : printf("Invalid Choice");
+        }}} 
+</h2>
+</pre>
+</div>
+<div class="col2">
+<h1 align="center">OUTPUT</h1>
+<h2>
+<pre>
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 1
+Enter a value : 2
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 1
+Enter a value : 3
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 1
+Enter a value : 5
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 2
+5
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 3
+3
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 4
+32
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 5
+Stack is not full
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 6
+Stack is not Empty
+Press 1 for push(),2 for pop,3 for peek(),
+4 display(),5 for isFull(),6 for isEmpty(),
+7 for exit : 7
+Exited!
+</h2>
+</pre>
+</div>
+</div>
+</body>
+</html> 
